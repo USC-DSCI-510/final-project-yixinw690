@@ -4,7 +4,7 @@
 
 ## Name of the Project
 
-## Team Members (Name and Student IDs)
+## Team Members (Yixin Wang & Yiqian Zheng)
 
 ## Instructions to create a conda enviornment
 

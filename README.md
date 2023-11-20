@@ -5,7 +5,7 @@
 ## Name of the Project
 
 ## Team Members 
-  (Yixin Wang & Yiqian Zheng)
+### (Yixin Wang & Yiqian Zheng)
 
 ## Instructions to create a conda enviornment
 

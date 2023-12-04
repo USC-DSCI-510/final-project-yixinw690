@@ -18,7 +18,8 @@ The libraries used in our project include requests, pandas, seaborn, and matplot
 pip install -r requirements.txt
 ```
 ## Instructions on how to download the data
-Run the code in get_data.py to download the restaurant data and income data from Yelp API and Census Bureau API. API keys are included in the code. 2 csv files named " restaurants_in_boston.csv" and " census_income_data_acs_boston.csv" will be downloaded.
+Run the code in get_data.py to download the cuisine type and zip code data of 1000 randomly selected restaurants from Yelp API, and income data of 31 zip codes in Boston Metropolitan area from Census Bureau API. API keys are included in the code. 2 csv files named " restaurants_in_boston.csv" and " census_income_data_acs_boston.csv" will be downloaded.
+* Yelp API generates different sets of 1000 restaurants every time you try a new API requests due to the API restriction, which might leads to statistical results that's slightly different from the statistics in our report (this doesn't impact the general trends in the correlation and descriptive analysis). So please use the file in "processed data" to conduct analysis in order to match the numbers in our report. 
 ## Instructions on how to clean the data
 Run the code in clean_data.py to conduct data cleaning. 
 * For the restaurants data, 3 csv files will be downloaded in 3 steps.

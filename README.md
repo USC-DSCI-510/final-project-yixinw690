@@ -5,7 +5,7 @@
 ###  Discover the Restaurant Diversity in Boston
 
 ## Team Members 
-### Yixin Wang & Yiqian Zheng
+#### Yixin Wang & Yiqian Zheng
 
 ## Instructions to create a conda enviornment
 

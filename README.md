@@ -25,7 +25,7 @@ Run the code in clean_data.py to conduct data cleaning.
   - Firstly, remove restaurants without cuisine tags.
   - Secondly, relabel the restaurants' cuisine types. (e.g. American includes New American, American, Hawaiian, and Southern) 
   - Lastly, remove the restaurants that are not in the Boston Metropolitan zip codes, and remove the original cuisine labels column as well.
-So the final csv used for analysis is called "filtered_restaurants_without_cuisine_types.csv".
+* So the final restaurants data csv used for analysis is called "filtered_restaurants_without_cuisine_types.csv".
 * For the income data, we summarized the original 10 brackets into 6 bracktes, and created the new table called "census_income_data_acs_boston_cleaned_combined_reordered.csv" 
 ## Instrucions on how to run analysis code
 

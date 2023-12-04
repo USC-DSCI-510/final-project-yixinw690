@@ -111,7 +111,7 @@ print(f"Updated data (without Cuisine Types) has been written to {new_csv_file_p
 
 
 #Reorganize income level data into 6 groups
-file_path = 'clean/census_income_data_acs_boston_cleaned.csv'
+file_path = 'census_income_data_acs_boston.csv'
 df = pd.read_csv(file_path)
 
 # Combine and sum the values for the specified income ranges

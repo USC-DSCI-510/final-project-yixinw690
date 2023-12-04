@@ -17,16 +17,7 @@ nationality_keywords = [
 
 filtered_df = df[df['Cuisine Types'].str.lower().str.contains('|'.join(nationality_keywords))]
 
-cleaned_csv_file_path = 'cleaned_restaurants_in_boston.csv'
-filtered_df.to_csv(cleaned_csv_file_path, index=False)
-
-print(f"Cleaned data has been written to {cleaned_csv_file_path}")
-
-#Relable restaurants' cuisine types
-csv_file_path = 'cleaned_restaurants_in_boston.csv'
-df = pd.read_csv(csv_file_path)
-
-# Function to assign labels based on specified criteria
+# Relabel restaurants' cuisine types
 def assign_cuisine_category(row):
     cuisine_types = row['Cuisine Types'].lower()
     
@@ -81,15 +72,6 @@ def assign_cuisine_category(row):
 
 df['Cuisine Category'] = df.apply(assign_cuisine_category, axis=1)
 
-updated_csv_file_path = 'updated_cleaned_restaurants_in_boston.csv'
-df.to_csv(updated_csv_file_path, index=False)
-
-print(f"Updated data has been written to {updated_csv_file_path}")
-
-# Read the cleaned CSV file into a DataFrame
-csv_file_path = 'updated_cleaned_restaurants_in_boston.csv'
-df = pd.read_csv(csv_file_path)
-
 # List of valid zip codes
 valid_zip_codes = [
     2203, 2116, 2124, 2132, 2199, 2110, 2113, 2122, 2125, 2128,
@@ -103,12 +85,11 @@ df_filtered = df[df['Zip Code'].astype(int).isin(valid_zip_codes)]
 # Drop the "Cuisine Types" column
 df_filtered.drop(columns=['Cuisine Types'], inplace=True)
 
-# Write the updated data to a new CSV file
-new_csv_file_path = 'filtered_restaurants_without_cuisine_types.csv'
-df_filtered.to_csv(new_csv_file_path, index=False)
+# Save the cleaned and relabeled data to a new CSV file
+updated_csv_file_path = 'filtered_restaurants_without_cuisine_types.csv'
+df_filtered.to_csv(updated_csv_file_path, index=False)
 
-print(f"Updated data (without Cuisine Types) has been written to {new_csv_file_path}")
-
+print(f"Updated data (without Cuisine Types) has been written to {updated_csv_file_path}")
 
 #Reorganize income level data into 6 groups
 file_path = 'census_income_data_acs_boston.csv'

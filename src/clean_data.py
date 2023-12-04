@@ -86,7 +86,7 @@ df.to_csv(updated_csv_file_path, index=False)
 
 print(f"Updated data has been written to {updated_csv_file_path}")
 
-#Remove restaurants that are not in the boston metro area through zip code
+# Read the cleaned CSV file into a DataFrame
 csv_file_path = 'updated_cleaned_restaurants_in_boston.csv'
 df = pd.read_csv(csv_file_path)
 
@@ -97,12 +97,17 @@ valid_zip_codes = [
     2129, 2163, 2114, 2119, 2130, 2131, 2134, 2136, 2210, 2215, 2111
 ]
 
+# Filter DataFrame based on valid zip codes
 df_filtered = df[df['Zip Code'].astype(int).isin(valid_zip_codes)]
 
-filtered_csv_file_path = 'filtered_cleaned_restaurants_in_boston.csv'
-df_filtered.to_csv(filtered_csv_file_path, index=False)
+# Drop the "Cuisine Types" column
+df_filtered.drop(columns=['Cuisine Types'], inplace=True)
 
-print(f"Filtered data has been written to {filtered_csv_file_path}")
+# Write the updated data to a new CSV file
+new_csv_file_path = 'filtered_restaurants_without_cuisine_types.csv'
+df_filtered.to_csv(new_csv_file_path, index=False)
+
+print(f"Updated data (without Cuisine Types) has been written to {new_csv_file_path}")
 
 
 #Reorganize income level data into 6 groups

@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Clean Yelp Data, remove restaurants without cuisine types
+# Read the CSV file into a DataFrame
 csv_file_path = 'restaurants_in_boston.csv'
 df = pd.read_csv(csv_file_path)
 
@@ -14,7 +14,7 @@ nationality_keywords = [
     'moroccan', 'eritrean', 'sushi', 'creperies', 'trinidadian', 'turkish', 'hawaiian', 'thai', 'indonesian',
     'singapore', 'poke', 'dim sum', 'izakaya', 'irish', 'kebab', 'shanghainese', 'middle eastern'
 ]
-
+# Filter the DataFrame to include only restaurants with nationality-based cuisine types
 filtered_df = df[df['Cuisine Types'].str.lower().str.contains('|'.join(nationality_keywords))]
 
 # Relabel restaurants' cuisine types
@@ -85,11 +85,12 @@ df_filtered = df[df['Zip Code'].astype(int).isin(valid_zip_codes)]
 # Drop the "Cuisine Types" column
 df_filtered.drop(columns=['Cuisine Types'], inplace=True)
 
-# Save the cleaned and relabeled data to a new CSV file
-updated_csv_file_path = 'filtered_restaurants_without_cuisine_types.csv'
-df_filtered.to_csv(updated_csv_file_path, index=False)
+# Write the filtered data to a new CSV file
+filtered_csv_file_path = 'filtered_restaurants_without_cuisine_types.csv'
+df_filtered.to_csv(filtered_csv_file_path, index=False)
 
-print(f"Updated data (without Cuisine Types) has been written to {updated_csv_file_path}")
+print(f"Updated data (without Cuisine Types) has been written to {filtered_csv_file_path}")
+
 
 #Reorganize income level data into 6 groups
 file_path = 'census_income_data_acs_boston.csv'

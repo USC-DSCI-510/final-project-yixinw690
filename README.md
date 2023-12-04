@@ -12,7 +12,7 @@
 ## Instructions on how to install the required libraries
 
 ## Instructions on how to download the data
-###### Run the code in get_data.py to download the restaurant data and income data from Yelp API and Census Bureau API. API keys are included in the code. 2 csv files named " restaurants_in_boston.csv" and " census_income_data_acs_boston.csv" will be downloaded.
+Run the code in get_data.py to download the restaurant data and income data from Yelp API and Census Bureau API. API keys are included in the code. 2 csv files named " restaurants_in_boston.csv" and " census_income_data_acs_boston.csv" will be downloaded.
 ## Instructions on how to clean the data
 ###### Run the code in clean_data.py to conduct data cleaning. For the restaurants data, 3 csv files will be downloaded in 3 steps. In step 1, " cleaned_restaurants_in_boston.csv" is downloaded to remove restaurants without cuisine tags. Then, this file is used to relabel the restaurants' cuisine types, written into the new file "updated_cleaned_restaurants_in_boston.csv"; Lastly, "updated_cleaned_restaurants_in_boston.csv" is used to remove the restaurants that are not in the Boston Metropolitan zip codes, and remove the original cuisine labels column as well. So the final csv used for analysis is called "filtered_restaurants_without_cuisine_types.csv". For the income data, we summarized the original 10 brackets into 6 bracktes, and created the new table called "census_income_data_acs_boston_cleaned_combined_reordered.csv" 
 ## Instrucions on how to run analysis code

@@ -8,9 +8,9 @@ Yixin Wang & Yiqian Zheng
 
 ## Instructions to create a conda enviornment
 For macOS and Linux, you can just open the regular terminal.
-'''
+```
 conda create -n income_cuisine_analysis python=3.8
-'''
+```
 This command creates a new conda environment named income_cuisine_analysis with Python 3.8 installed. You can replace 3.8 with any version of Python that you need for your project.
 ## Instructions on how to install the required libraries
 

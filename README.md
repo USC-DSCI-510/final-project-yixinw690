@@ -13,7 +13,10 @@ conda create -n income_cuisine_analysis python=3.8
 ```
 This command creates a new conda environment named income_cuisine_analysis with Python 3.8 installed. You can replace 3.8 with any version of Python that you need for your project.
 ## Instructions on how to install the required libraries
-
+The libraries used in our project include requests, pandas, seaborn, and matplotlib. Install the libraries by running following command in your terminal:
+```
+pip install -r requirements.txt
+```
 ## Instructions on how to download the data
 Run the code in get_data.py to download the restaurant data and income data from Yelp API and Census Bureau API. API keys are included in the code. 2 csv files named " restaurants_in_boston.csv" and " census_income_data_acs_boston.csv" will be downloaded.
 ## Instructions on how to clean the data

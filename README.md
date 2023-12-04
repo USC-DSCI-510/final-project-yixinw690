@@ -28,5 +28,6 @@ Run the code in clean_data.py to conduct data cleaning.
 * So the final restaurants data csv used for analysis is called "filtered_restaurants_without_cuisine_types.csv".
 * For the income data, we summarized the original 10 brackets into 6 bracktes, and created the new table called "census_income_data_acs_boston_cleaned_combined_reordered.csv" 
 ## Instrucions on how to run analysis code
-
+Run the code in run_analysis.py to get all the visualization and descriptive analysis of the data.
 ## Instructions on how to create visualizations
+Run the code in visualize_results.py to get graphs of our analysis. The only difference between the analysis code and visualization code is the analysis code generate some descriptive statistics results of our analysis. 

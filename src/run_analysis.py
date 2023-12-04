@@ -25,6 +25,19 @@ plt.xlabel('Number of Unique Cuisine Types')
 plt.ylabel('Frequency')
 plt.show()
 
+# Calculate median and IQR
+median_cuisine_diversity = cuisine_diversity['Cuisine Diversity'].median()
+Q1 = cuisine_diversity['Cuisine Diversity'].quantile(0.25)
+Q3 = cuisine_diversity['Cuisine Diversity'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+outliers = cuisine_diversity[(cuisine_diversity['Cuisine Diversity'] < lower_bound) | (cuisine_diversity['Cuisine Diversity'] > upper_bound)]
+
+# Display median and IQR
+print("\nMedian of Cuisine Diversity:", median_cuisine_diversity)
+print("Interquartile Range (IQR):", IQR)
+
 # Visualization #2: Scatterplot showing correlation between income and cuisine types
 # Load restaurant_count file
 df_restaurant = pd.read_csv('restaurant_count.csv')

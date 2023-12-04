@@ -1,7 +1,6 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from IPython.display import display
 
 # Load 2 csv files for analysis
 cuisine_data_path = 'filtered_restaurants_without_cuisine_types.csv'
@@ -62,8 +61,6 @@ Q1 = cuisine_diversity['Cuisine Diversity'].quantile(0.25)
 Q3 = cuisine_diversity['Cuisine Diversity'].quantile(0.75)
 IQR = Q3 - Q1
 lower_bound = Q1 - 1.5 * IQR
-outliers = cuisine_diversity[cuisine_diversity['Cuisine Diversity'] < lower_bound]
-display(outliers)
 
 # Function to determine the predominant income bracket for each zip code
 def predominant_income_bracket(row):
